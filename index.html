@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+
+        <h2>Welcome to the For Loop Hoosier Lottery!</h2>
+
+        <div class="lotteryNumbers">
+
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+
+    <div>
+
+        <h2>Welcome to the While Loop Hoosier Lottery</h2>
+
+        <div class = "whileNumbers">
+
+        </div>
+
+
+    </div>
+
+</body>
+<script>
+
+    let displayNumbers = document.querySelector(".lotteryNumbers");
+
+    let randomStr = "";
+
+    for (winningNum = 1; winningNum < 7; winningNum++) {
+
+        let randomNumber = Math.floor(Math.random() * 50);
+
+        randomNumber = parseInt(randomNumber);
+
+        randomStr += `Winning number ${winningNum} is: ${randomNumber}<br>`;
+    }
+
+    displayNumbers.innerHTML = randomStr;
+    
+
+    let displayWinners = document.querySelector(".whileNumbers");
+
+    let secondStr = "";
+
+    let lotteryNum = 1;
+
+    while (lotteryNum < 7) {
+
+        let randNum = Math.floor(Math.random() * 50);
+        randNum = parseInt(randNum);
+
+        secondStr += `Winning number ${lotteryNum} is: ${randNum}<br>`;
+
+        lotteryNum++;
+
+    }
+
+    displayWinners.innerHTML = secondStr;
+
+   
+
+</script>
+
+
+</html>
